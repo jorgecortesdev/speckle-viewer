@@ -43,7 +43,7 @@ onMounted(() => {
     <v-card-title>Object Loader</v-card-title>
     <v-card-subtitle>Speckle Viewer Sample</v-card-subtitle>
     <v-card-text>
-      <div id="obj-loader" style="height:70vh;"></div>
+      <div id="obj-loader" style="height:80vh;"></div>
       <v-progress-linear color="primary" height="10" rounded indeterminate v-if="isLoading" />
     </v-card-text>
   </v-card>

@@ -47,7 +47,12 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>categorize page</div>
-  <div id="categorize" style="height:60vh;"></div>
-  <v-progress-linear color="primary" height="10" rounded indeterminate v-if="isLoading" />
+  <v-card flat>
+    <v-card-title>Categorize</v-card-title>
+    <v-card-subtitle>Speckle Viewer Sample</v-card-subtitle>
+    <v-card-text>
+      <div id="categorize" style="height: 80vh;"></div>
+      <v-progress-linear color="primary" height="10" rounded indeterminate v-if="isLoading" />
+    </v-card-text>
+  </v-card>
 </template>

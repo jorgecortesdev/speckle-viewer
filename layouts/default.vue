@@ -10,22 +10,29 @@ const nav = [
 </script>
 
 <template>
-  <div>
-    <ul>
-      <li v-for="link in nav" :key="link.label">
-        <NuxtLink :to="link.to">{{ link.label }}</NuxtLink>
-      </li>
-    </ul>
-    <slot />
-  </div>
-</template>
+  <v-app>
+    <v-app-bar>
+      <v-container class="d-flex align-center">
+        <v-btn
+          v-for="link in nav"
+          :key="link.label"
+          :text="link.label"
+          variant="text"
+          :href="link.to"
+        />
+      </v-container>
+    </v-app-bar>
 
-<style scoped>
-ul {
-  display: flex;
-  gap: 10px;
-}
-ul > li {
-  list-style-type: none;
-}
-</style>
+    <v-main class="bg-grey-lighten-3">
+      <v-container>
+        <v-row>
+          <v-col>
+            <v-sheet min-height="90vh" rounded="lg">
+              <slot />
+            </v-sheet>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-main>
+  </v-app>
+</template>
