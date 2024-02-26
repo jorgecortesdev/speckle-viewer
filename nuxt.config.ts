@@ -6,6 +6,11 @@ export default defineNuxtConfig({
   build: {
     transpile: ['vuetify'],
   },
+  app: {
+    head: {
+      link: [{ rel: 'icon', type: 'image/ico', href: "/favicon.ico" }]
+    }
+  },
   modules: [
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
